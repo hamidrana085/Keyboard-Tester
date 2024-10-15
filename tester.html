@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+		<title>Keyboard Tester</title>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="icon" href="icon.svg" type="image/x-icon" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<div class="everything">
+			<div class="cursor hidden">
+				<div class="cursor-outer">
+					<div class="cursor-inner"></div>
+				</div>
+			</div>
+
+			<div class="dark-light-toggle-container">
+				<h2 class="mode-text">light</h2>
+				<input type="checkbox" id="dark-mode" class="input" />
+				<label for="dark-mode" class="label">
+					<div class="circle"></div>
+				</label>
+				<h2 class="mode-text">dark</h2>
+			</div>
+			<div class="memory-mode-toggle-container">
+				<h2 class="mem-off-text mode-text">mem-off</h2>
+				<input type="checkbox" id="memory-mode" class="input-memory" />
+				<label for="memory-mode" class="label-memory">
+					<div class="circle-memory"></div>
+				</label>
+				<h2 class="mem-on-text mode-text">mem-on</h2>
+			</div>
+
+			<div class="container">
+				<div class="top-row">
+					<div class="top-left">
+						<div class="row top-left-left">
+							<div class="class-escape center">esc</div>
+						</div>
+						<div class="row top-left-mid-1">
+							<div class="class-f1 center">f1</div>
+							<div class="class-f2 center">f2</div>
+							<div class="class-f3 center">f3</div>
+							<div class="class-f4 center">f4</div>
+						</div>
+						<div class="row top-left-mid-2">
+							<div class="class-f5 center">f5</div>
+							<div class="class-f6 center">f6</div>
+							<div class="class-f7 center">f7</div>
+							<div class="class-f8 center">f8</div>
+						</div>
+						<div class="row top-left-right">
+							<div class="class-f9 center">f9</div>
+							<div class="class-f10 center">f10</div>
+							<div class="class-f11 center">f11</div>
+							<div class="class-f12 center">f12</div>
+						</div>
+					</div>
+					<div class="top-right">
+						<div class="row">
+							<div class="class-printscreen center">ps</div>
+							<div class="class-scrolllock center">slk</div>
+							<div class="class-pause center">pb</div>
+						</div>
+					</div>
+				</div>
+				<div class="bottom-row">
+					<div class="bottom-left">
+						<div class="row bottom-left-row">
+							<div class="class-backquote center">`</div>
+							<div class="class-digit1 center">1</div>
+							<div class="class-digit2 center">2</div>
+							<div class="class-digit3 center">3</div>
+							<div class="class-digit4 center">4</div>
+							<div class="class-digit5 center">5</div>
+							<div class="class-digit6 center">6</div>
+							<div class="class-digit7 center">7</div>
+							<div class="class-digit8 center">8</div>
+							<div class="class-digit9 center">9</div>
+							<div class="class-digit0 center">0</div>
+							<div class="class-minus center">-</div>
+							<div class="class-equal center">=</div>
+							<div class="class-backspace space-fill center">backspace</div>
+						</div>
+						<div class="row bottom-left-row">
+							<div class="class-tab space-fill center">tab</div>
+							<div class="class-keyq center">q</div>
+							<div class="class-keyw center">w</div>
+							<div class="class-keye center">e</div>
+							<div class="class-keyr center">r</div>
+							<div class="class-keyt center">t</div>
+							<div class="class-keyy center">y</div>
+							<div class="class-keyu center">u</div>
+							<div class="class-keyi center">i</div>
+							<div class="class-keyo center">0</div>
+							<div class="class-keyp center">p</div>
+							<div class="class-bracketleft center">[</div>
+							<div class="class-bracketright center">]</div>
+							<div class="class-backslash center space-fill">\</div>
+						</div>
+						<div class="row bottom-left-row">
+							<div class="class-capslock center space-fill">capslock</div>
+							<div class="class-keya center">a</div>
+							<div class="class-keys center">s</div>
+							<div class="class-keyd center">d</div>
+							<div class="class-keyf center">f</div>
+							<div class="class-keyg center">g</div>
+							<div class="class-keyh center">h</div>
+							<div class="class-keyj center">j</div>
+							<div class="class-keyk center">k</div>
+							<div class="class-keyl center">l</div>
+							<div class="class-semicolon center">;</div>
+							<div class="class-quote center">'</div>
+							<div class="class-enter center space-fill">enter</div>
+						</div>
+						<div class="row bottom-left-row">
+							<div class="class-shiftleft center space-fill">shift</div>
+							<div class="class-keyz center">z</div>
+							<div class="class-keyx center">x</div>
+							<div class="class-keyc center">c</div>
+							<div class="class-keyv center">v</div>
+							<div class="class-keyb center">b</div>
+							<div class="class-keyn center">n</div>
+							<div class="class-keym center">m</div>
+							<div class="class-comma center">,</div>
+							<div class="class-period center">.</div>
+							<div class="class-slash center">/</div>
+							<div class="class-shiftright center space-fill">shift</div>
+						</div>
+						<div class="row bottom-left-row">
+							<div class="class-controlleft modifiers center">ctrl</div>
+							<div class="class-metaleft modifiers center">win</div>
+							<div class="class-altleft modifiers center">alt</div>
+							<div class="class-space space-fill center">space</div>
+							<div class="class-altright modifiers center">alt</div>
+							<div class="class-metaright modifiers center">win</div>
+							<div class="class-contextmenu modifiers center">apps</div>
+							<div class="class-controlright modifiers center">ctrl</div>
+						</div>
+					</div>
+					<div class="bottom-mid">
+						<div class="bottom-mid-inside">
+							<div class="row">
+								<div class="class-insert center">ins</div>
+								<div class="class-home center">hm</div>
+								<div class="class-pageup center">pu</div>
+							</div>
+							<div class="row">
+								<div class="class-delete center">del</div>
+								<div class="class-end center">end</div>
+								<div class="class-pagedown center">pd</div>
+							</div>
+						</div>
+						<div class="bottom-mid-inside">
+							<div class="row">
+								<div class="class-arrowup center">&#x2191</div>
+							</div>
+							<div class="row">
+								<div class="class-arrowleft center">&#x2190</div>
+								<div class="class-arrowdown center">&#x2193</div>
+								<div class="class-arrowright center">&#x2192</div>
+							</div>
+						</div>
+					</div>
+					<div class="bottom-right">
+						<div class="bottom-right-left">
+							<div class="row">
+								<div class="class-numlock center">nlk</div>
+								<div class="class-numpaddivide center">/</div>
+								<div class="class-numpadmultiply center">*</div>
+							</div>
+							<div class="row">
+								<div class="class-numpad7 center">7</div>
+								<div class="class-numpad8 center">8</div>
+								<div class="class-numpad9 center">9</div>
+							</div>
+							<div class="row">
+								<div class="class-numpad4 center">4</div>
+								<div class="class-numpad5 center">5</div>
+								<div class="class-numpad6 center">6</div>
+							</div>
+							<div class="row">
+								<div class="class-numpad1 center">1</div>
+								<div class="class-numpad2 center">2</div>
+								<div class="class-numpad3 center">3</div>
+							</div>
+							<div class="row">
+								<div class="class-numpad0 center space-fill">0</div>
+								<div class="class-numpaddecimal center">.</div>
+							</div>
+						</div>
+						<div class="row bottom-right-right">
+							<div class="class-numpadsubtract center">-</div>
+							<div class="class-numpadadd center space-fill">+</div>
+							<div class="class-numpadenter center space-fill">ent</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<h1 class="tip">use a pc man!</h1>
+	</body>
+
+	<script src="script.js"></script>
+</html>
