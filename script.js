@@ -23,7 +23,7 @@ function updateBodyOnLoad() {
 }
 function updateBody() {
 	if (inputEl.checked) {
-		circleEl.style.animation = "toggleOn 0.4s ease forwards";
+		circleEl.style.animation = "toggleOn 0.4s forwards";
 		bodyEl.style.backgroundColor = "black";
 		cursorInnerEl.style.backgroundColor = "white";
 		cursorOuterEl.style.outlineColor = "rgba(255, 255, 255, 0.5)";
@@ -34,7 +34,7 @@ function updateBody() {
 			}
 		}
 	} else {
-		circleEl.style.animation = "toggleOff 0.4s ease forwards";
+		circleEl.style.animation = "toggleOff 0.4s forwards";
 		bodyEl.style.backgroundColor = "white";
 		cursorInnerEl.style.backgroundColor = "rgb(58, 58, 58)";
 		cursorOuterEl.style.outlineColor = "rgba(90, 90, 90, 0.5)";
@@ -88,10 +88,10 @@ function updateBodyOnLoadMemory() {
 }
 function updateBodyMemory() {
 	if (inputMemoryEl.checked) {
-		circleMemoryEl.style.animation = "toggleOn 0.4s ease forwards";
+		circleMemoryEl.style.animation = "toggleOn 0.4s forwards";
 		memoryModeOn = true;
 	} else {
-		circleMemoryEl.style.animation = "toggleOff 0.4s ease forwards";
+		circleMemoryEl.style.animation = "toggleOff 0.4s forwards";
 		memoryModeOn = false;
 	}
 }
