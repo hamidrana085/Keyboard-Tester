@@ -14,7 +14,7 @@ body {
 	font-family: "Ubuntu", serif;
 	font-weight: 500;
 	user-select: none;
-	transition: background-color 0.3s cubic-bezier(0, 1.11, 1, 1.02)
+	transition: background-color 0.3s cubic-bezier(0, 1.11, 1, 1.02);
 }
 
 .cursor {
@@ -216,5 +216,13 @@ body {
 	.tip {
 		display: block;
 		text-align: center;
+	}
+}
+@media (max-height: 767px) {
+	.dark-light-toggle-container {
+		top: 40px;
+	}
+	.memory-mode-toggle-container {
+		top: 100px;
 	}
 }
