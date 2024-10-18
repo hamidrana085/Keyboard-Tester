@@ -33,6 +33,10 @@ function updateBody() {
 				darkMode(styleEl);
 			}
 		}
+		else
+		{
+			pressedButtons.length = 0;
+		}
 	} else {
 		circleEl.style.animation = "toggleOff 0.4s forwards";
 		bodyEl.style.backgroundColor = "white";
@@ -43,6 +47,10 @@ function updateBody() {
 				const styleEl = document.querySelector(`${pressedButtons[i]}`);
 				lightMode(styleEl);
 			}
+		}
+		else
+		{
+			pressedButtons.length = 0;
 		}
 	}
 }
@@ -84,15 +92,17 @@ function updateBodyOnLoadMemory() {
 	} else {
 		circleMemoryEl.style.transform = "translateX(0)";
 		memoryModeOn = false;
+		
 	}
 }
 function updateBodyMemory() {
 	if (inputMemoryEl.checked) {
+		pressedButtons.length = 0;
 		circleMemoryEl.style.animation = "toggleOn 0.4s forwards";
 		memoryModeOn = true;
 	} else {
 		circleMemoryEl.style.animation = "toggleOff 0.4s forwards";
-		memoryModeOn = false;
+		memoryModeOn = false;		
 	}
 }
 
