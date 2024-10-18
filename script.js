@@ -118,7 +118,9 @@ document.addEventListener("keydown", (event) => {
 		key === "f10" ||
 		key === "f11" ||
 		key === "f12" ||
-		key === "tab"
+		key === "tab" ||
+		key === "altleft" ||
+		key === "altright"
 	) {
 		event.preventDefault();
 	}
