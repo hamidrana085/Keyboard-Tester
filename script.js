@@ -94,7 +94,7 @@ const circleMemoryEl = document.querySelector(".circle-memory");
 // Reading memory mode status from localstorage
 inputMemoryEl.checked = JSON.parse(localStorage.getItem("memory-mode"));
 
-// This is that the toggle circle position stays as "ON" if the memory toggle is checked when the page loads
+// This is so that the toggle circle position stays as "ON" if the memory toggle is checked when the page loads
 function updateBodyOnLoadMemory() {
 	if (inputMemoryEl.checked) {
 		circleMemoryEl.style.transform = "translateX(40px)";
