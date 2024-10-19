@@ -103,9 +103,10 @@ inputMemoryEl.addEventListener("input", () => {
 		const removeEl = document.querySelector(`${pressedButtons[i]}`);
 		removeStyles(removeEl);
 	}
+	pressedButtons = [];
 });
 
-const pressedButtons = [];
+let pressedButtons = [];
 
 document.addEventListener("keydown", (event) => {
 	playSound();
