@@ -1,25 +1,25 @@
 // Variables
-const inputEl = document.querySelector(".input"); // Dark mode toggle
+const darkModeInputEl = document.querySelector(".input"); // Dark mode toggle
 const bodyEl = document.querySelector("body");
-const circleEl = document.querySelector(".circle"); // Dark mode toggle circle
+const darkModeCircleEl = document.querySelector(".circle"); // Dark mode toggle circle
 const cursorInnerEl = document.querySelector(".cursor-inner");
 const cursorOuterEl = document.querySelector(".cursor-outer");
 
 // Reading dark mode status from localstorage
-inputEl.checked = JSON.parse(localStorage.getItem("dark-mode"));
+darkModeInputEl.checked = JSON.parse(localStorage.getItem("dark-mode"));
 
 // For updating the styles and memory mode when the page loads
 updateBodyOnLoad();
 
 // For updating the styles based on the dark-mode status
 function updateBodyOnLoad() {
-	if (inputEl.checked) {
-		circleEl.style.transform = "translateX(40px)";
+	if (darkModeInputEl.checked) {
+		darkModeCircleEl.style.transform = "translateX(40px)";
 		bodyEl.style.backgroundColor = "black";
 		cursorInnerEl.style.backgroundColor = "white";
 		cursorOuterEl.style.outlineColor = "rgba(255, 255, 255, 0.5)";
 	} else {
-		circleEl.style.transform = "translateX(0)";
+		darkModeCircleEl.style.transform = "translateX(0)";
 		bodyEl.style.backgroundColor = "white";
 		cursorInnerEl.style.backgroundColor = "rgb(58, 58, 58)";
 		cursorOuterEl.style.outlineColor = "rgba(90, 90, 90, 0.5)";
@@ -27,9 +27,9 @@ function updateBodyOnLoad() {
 }
 
 // For updating the body everytime the user toggles the dark mode
-function updateBody() {
-	if (inputEl.checked) {
-		circleEl.style.animation = "toggleOn 0.4s forwards";
+function darkLightModeToggle() {
+	if (darkModeInputEl.checked) {
+		darkModeCircleEl.style.animation = "toggleOn 0.4s forwards";
 		bodyEl.style.backgroundColor = "black";
 		cursorInnerEl.style.backgroundColor = "white";
 		cursorOuterEl.style.outlineColor = "rgba(255, 255, 255, 0.5)";
@@ -41,7 +41,7 @@ function updateBody() {
 			}
 		}
 	} else {
-		circleEl.style.animation = "toggleOff 0.4s forwards";
+		darkModeCircleEl.style.animation = "toggleOff 0.4s forwards";
 		bodyEl.style.backgroundColor = "white";
 		cursorInnerEl.style.backgroundColor = "rgb(58, 58, 58)";
 		cursorOuterEl.style.outlineColor = "rgba(90, 90, 90, 0.5)";
@@ -77,13 +77,13 @@ function lightMode(pressedEl) {
 
 // LocalStorage function
 function updateLocalStorage() {
-	localStorage.setItem("dark-mode", JSON.stringify(inputEl.checked));
+	localStorage.setItem("dark-mode", JSON.stringify(darkModeInputEl.checked));
 	localStorage.setItem("memory-mode", JSON.stringify(inputMemoryEl.checked));
 }
 
 // Upon clicking the dark mode toggle, this updates the styles and localstorage
-inputEl.addEventListener("input", () => {
-	updateBody();
+darkModeInputEl.addEventListener("input", () => {
+	darkLightModeToggle();
 	updateLocalStorage();
 });
 
@@ -156,13 +156,14 @@ document.addEventListener("keydown", (event) => {
 	}
 	const pressedEl = document.querySelector(`.class-${key}`);
 	// To invert the styles of the pressed key. That's what happens when you click a key
-	if (inputEl.checked) {
+	if (darkModeInputEl.checked) {
 		darkMode(pressedEl);
 	} else {
 		lightMode(pressedEl);
 	}
 
-	const keyReleased = (e) => {
+	
+	document.addEventListener("keyup", (e) => {
 		if (e.code === event.code) {
 			// Checking if the key we're working with has been released
 			if (!memoryModeOn) {
@@ -174,12 +175,11 @@ document.addEventListener("keydown", (event) => {
 				pressedButtons.push(`.class-${key}`); // Else if, the clicked button already doesn't exist inside the "pressedButtons" array, push this button to the array
 			}
 		}
-	};
+	});
 	window.addEventListener("blur", () => {
 		removeStyles(pressedEl); // To remove the styles from the pressed buttons, if used to change tab or window. CTRL+Tab for example.
 		pressedButtons = []; // To clear the array
 	});
-	document.addEventListener("keyup", keyReleased);
 });
 
 // To remove the styles from an individual button
