@@ -170,7 +170,7 @@ document.addEventListener("keydown", (event) => {
 				// If memory mode is "OFF", remove the styles after 150ms
 				setTimeout(() => {
 					removeStyles(pressedEl);
-				}, 150);
+				}, 0);
 			} else if (!pressedButtons.includes(`.class-${key}`)) {
 				pressedButtons.push(`.class-${key}`); // Else if, the clicked button already doesn't exist inside the "pressedButtons" array, push this button to the array
 			}
