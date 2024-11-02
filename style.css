@@ -148,8 +148,9 @@ body.dark-mode-defaults {
 	align-items: center;
 }
 .mode-text {
-	margin-left: -30px;
-	padding-right: 30px;
+	margin-left: -20px;
+	padding-right: 20px;
+	font-weight: 500;
 }
 .input,
 .input-memory {
@@ -158,21 +159,20 @@ body.dark-mode-defaults {
 .label,
 .label-memory {
 	position: relative;
-	width: 80px;
-	height: 40px;
-	background-color: lightgray;
+	width: 55px;
+	height: 30px;
+	background-color: rgb(195, 195, 195);
 	border-radius: 20px;
 	transform: translateX(-50%);
 }
 .circle,
 .circle-memory {
-	width: 34px;
-	height: 34px;
-	background-color: white;
+	width: 20px;
+	height: 20px;
+	background-color: rgb(230, 230, 230);
 	border-radius: 50%;
-	border-radius: 50%;
-	top: 3px;
-	left: 3px;
+	top: 5px;
+	left: 5px;
 	position: relative;
 	transition: background-color 0.4s;
 }
@@ -190,12 +190,12 @@ body.dark-mode-defaults {
 		transform: translateX(0);
 	}
 	100% {
-		transform: translateX(40px);
+		transform: translateX(25px);
 	}
 }
 @keyframes toggleOff {
 	0% {
-		transform: translateX(40px);
+		transform: translateX(25px);
 	}
 	100% {
 		transform: translateX(0);
