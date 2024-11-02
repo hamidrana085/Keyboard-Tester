@@ -206,9 +206,17 @@ body.dark-mode-defaults {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-direction: column;
 }
 .tip {
 	display: none;
+}
+.source-code-text {
+	text-transform: lowercase;
+	position: absolute;
+	bottom: 50px;
+	color: rgb(128, 128, 128);
+	text-decoration: none;
 }
 
 @media (max-width: 767px) {
