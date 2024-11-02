@@ -138,7 +138,7 @@ function removeAllStyles() {
 
 // Checking for key events on the body. The main function of the tester
 document.addEventListener("keydown", (event) => {
-	playSound(); // To the click sound each time a key is pressed
+	//playSound(); // To the click sound each time a key is pressed
 	const key = CSS.escape(event.code).toLowerCase();
 	if (
 		key === "f1" ||

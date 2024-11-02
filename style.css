@@ -118,9 +118,9 @@ body.dark-mode-defaults {
 	width: 38px;
 	border: solid 2px;
 	border-radius: 10px;
-	transition: color 0.3s cubic-bezier(0, 1.11, 1, 1.02),
-		background-color 0.3s cubic-bezier(0, 1.11, 1, 1.02),
-		border-color 0.3s cubic-bezier(0, 1.11, 1, 1.02);
+	transition: color 0.1s cubic-bezier(0, 1.11, 1, 1.02),
+		background-color 0.1s cubic-bezier(0, 1.11, 1, 1.02),
+		border-color 0.1s cubic-bezier(0, 1.11, 1, 1.02);
 }
 .center {
 	display: flex;
