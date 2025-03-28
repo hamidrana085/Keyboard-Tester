@@ -14,7 +14,7 @@ updateBodyOnLoad();
 // For updating the styles based on the dark-mode status
 function updateBodyOnLoad() {
 	if (inputEl.checked) {
-		circleEl.style.transform = "translateX(40px)";
+		circleEl.style.transform = "translateX(24px)";
 		bodyEl.style.backgroundColor = "black";
 		cursorInnerEl.style.backgroundColor = "white";
 		cursorOuterEl.style.outlineColor = "rgba(255, 255, 255, 0.5)";
@@ -97,7 +97,7 @@ inputMemoryEl.checked = JSON.parse(localStorage.getItem("memory-mode"));
 // This is so that the toggle circle position stays as "ON" if the memory toggle is checked when the page loads
 function updateBodyOnLoadMemory() {
 	if (inputMemoryEl.checked) {
-		circleMemoryEl.style.transform = "translateX(40px)";
+		circleMemoryEl.style.transform = "translateX(24px)";
 		memoryModeOn = true;
 	} else {
 		circleMemoryEl.style.transform = "translateX(0)";

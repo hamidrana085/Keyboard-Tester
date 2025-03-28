@@ -3,7 +3,6 @@
 }
 
 body {
-	background-color: black;
 	color: rgb(128, 128, 128);
 	margin: 0;
 	display: flex;
@@ -15,6 +14,9 @@ body {
 	font-weight: 500;
 	user-select: none;
 	transition: background-color 0.3s cubic-bezier(0, 1.11, 1, 1.02);
+}
+body.dark-mode-defaults {
+	background-color: black;
 }
 
 .cursor {
@@ -116,9 +118,9 @@ body {
 	width: 38px;
 	border: solid 2px;
 	border-radius: 10px;
-	transition: color 0.3s cubic-bezier(0, 1.11, 1, 1.02),
-		background-color 0.3s cubic-bezier(0, 1.11, 1, 1.02),
-		border-color 0.3s cubic-bezier(0, 1.11, 1, 1.02);
+	transition: color 0.1s cubic-bezier(0, 1.11, 1, 1.02),
+		background-color 0.1s cubic-bezier(0, 1.11, 1, 1.02),
+		border-color 0.1s cubic-bezier(0, 1.11, 1, 1.02);
 }
 .center {
 	display: flex;
@@ -146,8 +148,9 @@ body {
 	align-items: center;
 }
 .mode-text {
-	margin-left: -30px;
-	padding-right: 30px;
+	margin-left: -20px;
+	padding-right: 20px;
+	font-weight: 500;
 }
 .input,
 .input-memory {
@@ -156,21 +159,20 @@ body {
 .label,
 .label-memory {
 	position: relative;
-	width: 80px;
-	height: 40px;
-	background-color: lightgray;
+	width: 55px;
+	height: 30px;
+	background-color: rgb(195, 195, 195);
 	border-radius: 20px;
 	transform: translateX(-50%);
 }
 .circle,
 .circle-memory {
-	width: 34px;
-	height: 34px;
-	background-color: white;
+	width: 20px;
+	height: 20px;
+	background-color: rgb(230, 230, 230);
 	border-radius: 50%;
-	border-radius: 50%;
-	top: 3px;
-	left: 3px;
+	top: 5px;
+	left: 5px;
 	position: relative;
 	transition: background-color 0.4s;
 }
@@ -188,12 +190,12 @@ body {
 		transform: translateX(0);
 	}
 	100% {
-		transform: translateX(40px);
+		transform: translateX(25px);
 	}
 }
 @keyframes toggleOff {
 	0% {
-		transform: translateX(40px);
+		transform: translateX(25px);
 	}
 	100% {
 		transform: translateX(0);
@@ -204,9 +206,17 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-direction: column;
 }
 .tip {
 	display: none;
+}
+.source-code-text {
+	text-transform: lowercase;
+	position: absolute;
+	bottom: 50px;
+	color: rgb(128, 128, 128);
+	text-decoration: none;
 }
 
 @media (max-width: 767px) {
