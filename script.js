@@ -145,6 +145,7 @@ document.addEventListener("keydown", (event) => {
 		key === "f3" ||
 		key === "f5" ||
 		key === "f6" ||
+		key === "f7" ||
 		key === "f10" ||
 		key === "f11" ||
 		key === "f12" ||
